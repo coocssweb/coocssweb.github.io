@@ -1,2 +1,8 @@
 .idea/
 node_modules/
+build/
+config/
+src/
+package.json
+package-lock.json
+postcss.config.js
