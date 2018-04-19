@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import "base/variables.scss";
+@import "base/normalize.scss";
+@import "base/common.scss";
+@import "base/animation.scss";
+@import "base/tip.scss";
+@import "base/loading";
+@import "base/share.scss";
+
+.home{
+    text-align: center;
+    position: relative;
+    &-content{
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+.project{
+    background-color: #F29AAA;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    h2{
+        color: #ffffff;
+        font-size: 0px;
+        padding: 30px 0px; /*no*/
+        span{
+            display: inline-block;
+            position: relative;
+            font-size: 26px; /*no*/
+            background-color: #000000;
+            padding: 5px; /*no*/
+        }
+    }
+    &-wrapper{
+        padding: 20px 0px;/*no*/
+    }
+    &-item{
+        width: 150px;/*no*/
+        height: 180px;/*no*/
+        box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.1); /*no*/
+        -webkit-border-radius: 2px;/*no*/
+        border-radius: 2px;/*no*/
+        background: rgba(255,255,255,0.19);
+        padding: 14px 10px 7px;/*no*/
+        position: relative;
+        display: inline-block;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000000;
+        &:hover{
+            transform: translateY(5px);
+        }
+    }
+    &-name{
+        font-size: 20px;/*no*/
+        margin-bottom: 10px;/*no*/
+    }
+    &-desc{
+        font-size: 14px;/*no*/
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .home{
+        width: 40%;
+        float: left;
+    }
+    .project{
+        width: 60%;
+        float: left;
+    }
+}
