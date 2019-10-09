@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Device2/devices_icon_plug3_s </title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Device2/devices_icon_plug3_s-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 4.000000)" fill="url(#linearGradient-1)">
+            <path d="M8,0 L72,0 C76.418278,-8.11624501e-16 80,3.581722 80,8 L80,72 C80,76.418278 76.418278,80 72,80 L8,80 C3.581722,80 5.41083001e-16,76.418278 0,72 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z M69,52 L51,52 L51,60 L69,60 L69,52 Z M29,52 L11,52 L11,60 L29,60 L29,52 Z M36,14 L36,33 L44,33 L44,14 L36,14 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

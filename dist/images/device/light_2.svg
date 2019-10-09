@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Device2/devices_icon_lighting2_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Device2/devices_icon_lighting2_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(15.000000, 4.000000)" fill="url(#linearGradient-1)">
+            <path d="M1.17653164,25 L57.9184464,25 C55.3851034,31.357458 49.1236682,38.7367707 47.0353795,43.2349012 C44.9105756,47.8116848 43.7279395,52.5386171 43.4874712,57.4156982 C43.4437282,58.3028764 42.7028712,58.9999887 41.8037646,59 L18.4311095,59 C17.5696584,59 16.8468084,58.3583503 16.7549972,57.5121674 C16.2483564,52.8428928 14.8834048,48.083804 12.6601423,43.2349012 C10.6155207,38.7756116 3.91064947,31.3442659 1.17653164,25 Z M0.444130137,23 C0.159729927,22.0324175 0,21.1036005 0,20.2300375 C0,-1.38366197 12.6539656,0.018493891 30.3428571,0.018493891 C48.0317487,0.018493891 59,-1.38366197 59,20.2300375 C59,21.1069892 58.854121,22.0354679 58.5936878,23 L0.444130137,23 Z" id="Combined-Shape"></path>
+            <path d="M18,63 L42,63 L42,67 C42,73.627417 36.627417,79 30,79 L30,79 C23.372583,79 18,73.627417 18,67 L18,63 Z" id="Rectangle-4"></path>
+        </g>
+    </g>
+</svg>

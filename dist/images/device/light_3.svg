@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Device2/devices_icon_lighting3_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Device2/devices_icon_lighting3_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M79.8273659,11 L8.17263415,11 C8.05769918,10.5481641 7.94706521,10.0927212 7.840825,9.63371831 C7.79010117,9.41450967 7.76449204,9.19023998 7.76449204,8.96523924 C7.76449204,7.32758283 9.09207487,6 10.7297313,6 L77.2702687,6 C77.4952695,6 77.7195391,6.02560913 77.9387478,6.07633296 C79.5342467,6.44552376 80.5283658,8.03821943 80.159175,9.63371831 C80.0529348,10.0927212 79.9423008,10.5481641 79.8273659,11 Z M79.2839743,13 C76.3309146,23.2072285 71.1475392,31.4443977 64.88465,37.1315493 C59.1441,42.3455493 56.025,45.8714085 56.025,53.6482535 L56.025,63 L31.975,63 L31.975,53.6482535 C31.975,45.8714085 28.8559,42.3455493 23.11535,37.1315493 C16.8524608,31.4443977 11.6690854,23.2072285 8.71602571,13 L79.2839743,13 Z M32,66 L56,66 L56,70 C56,76.627417 50.627417,82 44,82 C37.372583,82 32,76.627417 32,70 L32,66 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>
