@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Scene/scene_icon_good_night</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Scene/scene_icon_good_night" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M74.542,66.964 C76.398,66.964 78.21,66.792 80,66.544 C72.868,76.842 60.984,83.6 47.51,83.6 C25.688,83.6 8,65.91 8,44.09 C8,24.126 22.82,7.666 42.052,5 C37.634,11.38 35.032,19.108 35.032,27.454 C35.032,49.274 52.722,66.964 74.542,66.964 Z M64.9212,8.2982 L67.3332,13.1842 L72.7252,13.9682 L68.8232,17.7722 L69.7452,23.1442 L64.9212,20.6082 L60.0972,23.1442 L61.0192,17.7722 L57.1172,13.9682 L62.5092,13.1842 L64.9212,8.2982 Z M72.633,44.09 L73.971,46.8 L76.963,47.236 L74.797,49.346 L75.309,52.326 L72.633,50.918 L69.957,52.326 L70.469,49.346 L68.303,47.236 L71.295,46.8 L72.633,44.09 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>
