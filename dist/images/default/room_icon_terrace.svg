@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_terrace</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Room/room_icon_terrace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M72,78 L61,78 L61,78.5 L61,78 L49,78 L49,78.5 L49,78 L38,78 L38,78.5 L38,78 L27,78 L27,78.5 L27,78 L16,78 L16,78.5 L16,78 L5,78 L5,66.9833984 L83,66.9833984 L83,78 L72,78 L72,78.5 L72,78 Z M30,5 L43,5 L43,30 L22,30 L22,13 C22,8.581722 25.581722,5 30,5 Z M59,5 C63.418278,5 67,8.581722 67,13 L67,30 L46,30 L46,5 L59,5 Z M22,33 L43,33 L43,58 L22,58 L22,33 Z M22,61 L43,61 L43,66 L22,66 L22,61 Z M46,33 L67,33 L67,58 L46,58 L46,33 Z M46,61 L67,61 L67,66 L46,66 L46,61 Z" id="Combined-Shape" fill="#999999"></path>
+    </g>
+</svg>

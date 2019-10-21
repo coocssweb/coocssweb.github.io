@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Device2/devices_icon_door_lock3_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Device2/devices_icon_door_lock3_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M54,13 L54,76 L14,76 C9.581722,76 6,72.418278 6,68 L6,21 C6,16.581722 9.581722,13 14,13 L54,13 Z M58,13 L74,13 C78.418278,13 82,16.581722 82,21 L82,68 C82,72.418278 78.418278,76 74,76 L58,76 L58,13 Z M25.76,26 C26.588,26 27.26,25.328 27.26,24.5 C27.26,23.672 26.588,23 25.76,23 L17.5,23 C16.672,23 16,23.672 16,24.5 C16,25.328 16.672,26 17.5,26 L25.76,26 Z" id="Combined-Shape" fill="#999999"></path>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_front</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Room/room_icon_front" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(22.000000, 11.000000)" fill="#999999">
+            <path d="M5,0 L40,0 C42.7614237,-5.07265313e-16 45,2.23857625 45,5 L45,62 C45,64.7614237 42.7614237,67 40,67 L5,67 C2.23857625,67 3.38176876e-16,64.7614237 0,62 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M38.5,34.5 C40.1568542,34.5 41.5,33.1568542 41.5,31.5 C41.5,29.8431458 40.1568542,28.5 38.5,28.5 C36.8431458,28.5 35.5,29.8431458 35.5,31.5 C35.5,33.1568542 36.8431458,34.5 38.5,34.5 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

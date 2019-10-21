@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Device2/devices_icon_na_plug2_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Device2/devices_icon_na_plug2_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,13 L78,13 C82.418278,13 86,16.581722 86,21 L86,65 C86,69.418278 82.418278,73 78,73 L10,73 C5.581722,73 2,69.418278 2,65 L2,21 C2,16.581722 5.581722,13 10,13 Z M25,24 L25,38 L31,38 L31,24 L25,24 Z M56,24 L56,38 L62,38 L62,24 L56,24 Z M43,51 C40.2385763,51 38,53.2385763 38,56 L38,63 L48,63 L48,56 C48,53.2385763 45.7614237,51 43,51 Z" id="Combined-Shape" fill="#999999"></path>
+    </g>
+</svg>

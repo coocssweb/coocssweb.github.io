@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_custom_n</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Room/room_icon_custom_n" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M46,46 L46,76 C46,77.104 45.104,78 44,78 C42.896,78 42,77.104 42,76 L42,46 L12,46 C10.896,46 10,45.104 10,44 C10,42.896 10.896,42 12,42 L42,42 L42,12 C42,10.896 42.896,10 44,10 C45.104,10 46,10.896 46,12 L46,42 L76,42 C77.104,42 78,42.896 78,44 C78,45.104 77.104,46 76,46 L46,46 Z" id="Combined-Shape" fill="#999999"></path>
+    </g>
+</svg>
