@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_entrance_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="113.245817%" y1="3.31013574%" x2="-8.63797109%" y2="95.6185209%" id="linearGradient-1">
+            <stop stop-color="#96D2E9" offset="0%"></stop>
+            <stop stop-color="#599AB0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Room/room_icon_entrance_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25.6666667,8.8 L66.0370818,8.8 C67.657117,8.8 68.9704151,10.1132981 68.9704151,11.7333333 L68.9704151,77 C68.9704151,78.6200353 67.657117,79.9333333 66.0370818,79.9333333 L25.6666667,79.9333333 L49.1704151,70.7953697 L49.1704151,17.9379637 L25.6666667,8.8 Z M21.0883872,9.64241893 L46.2,19.9094279 L46.2,68.8555622 L21.0565074,78.4560515 C20.2997765,78.7449925 19.4520919,78.3657739 19.1631508,77.609043 C19.0993659,77.4419914 19.0666667,77.2646839 19.0666667,77.085869 L19.0666667,11 C19.0666667,10.1899824 19.7233157,9.53333333 20.5333333,9.53333333 C20.723677,9.53333333 20.9122006,9.57038419 21.0883872,9.64241893 Z M40.3333333,38.8666667 L40.3333333,49.8666667 L43.2666667,49.8666667 L43.2666667,38.8666667 L40.3333333,38.8666667 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

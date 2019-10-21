@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>GROUP/group_icon_3_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="113.245817%" y1="3.31013574%" x2="-8.63797109%" y2="95.6185209%" id="linearGradient-1">
+            <stop stop-color="#96D2E9" offset="0%"></stop>
+            <stop stop-color="#599AB0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="GROUP/group_icon_3_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(6.570000, 11.680000)" fill="url(#linearGradient-1)">
+            <path d="M7.55510789,60.59 L66.43,60.59 C68.8490072,60.59 70.81,58.6290072 70.81,56.21 L70.81,17.66146 C73.1947817,18.0714656 75.0091255,20.1467987 75.0091255,22.6452996 L75.0091255,59.7327286 C75.0091255,62.5258407 72.7416779,64.7901053 69.9446396,64.7901053 L12.5471336,64.7901053 C10.0427136,64.7901053 7.96287206,62.9748209 7.55510789,60.59 Z M5.11,57.67 C2.27965413,57.67 4.02991612e-13,55.3917878 3.97903932e-13,52.56 L3.97903932e-13,5.11 C3.9846923e-13,2.27821272 2.27965413,5.23476972e-07 5.11,-6.9597661e-14 L14.6,-6.9597661e-14 C16.2134349,-0.000612045515 17.5104449,0.536415684 18.25,1.46 L27.01,10.22 L62.78,10.22 C65.6103459,10.1770592 67.89,12.4552714 67.89,15.33 L67.89,52.56 C67.89,55.3917878 65.6103459,57.67 62.78,57.67 L5.11,57.67 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

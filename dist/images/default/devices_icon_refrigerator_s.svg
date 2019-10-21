@@ -3,9 +3,14 @@
     <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
     <title>Device2/devices_icon_refrigerator_s</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Device2/devices_icon_refrigerator_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(19.000000, 2.000000)" fill="#999999">
+        <g id="Group" transform="translate(19.000000, 2.000000)" fill="url(#linearGradient-1)">
             <path d="M51,31 L0,31 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 L47,0 C49.209139,-4.05812251e-16 51,1.790861 51,4 L51,31 Z M51,34 L51,80 C51,82.209139 49.209139,84 47,84 L4,84 C1.790861,84 2.705415e-16,82.209139 0,80 L0,34 L51,34 Z M8,17 L8,25 L12,25 L12,17 L8,17 Z M8,40 L8,48 L12,48 L12,40 L8,40 Z" id="Combined-Shape"></path>
         </g>
     </g>

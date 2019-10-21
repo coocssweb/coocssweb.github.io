@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_gym_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Room/room_icon_gym_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M32,46 L56,46 L56,33 C56,30.2385763 58.2385763,28 61,28 L66,28 C68.7614237,28 71,30.2385763 71,33 L71,63 C71,65.7614237 68.7614237,68 66,68 L61,68 C58.2385763,68 56,65.7614237 56,63 L56,50 L32,50 L32,63 C32,65.7614237 29.7614237,68 27,68 L22,68 C19.2385763,68 17,65.7614237 17,63 L17,33 C17,30.2385763 19.2385763,28 22,28 L27,28 C29.7614237,28 32,30.2385763 32,33 L32,46 Z M9.5,36 C11.9852814,36 14,38.0147186 14,40.5 L14,55.5 C14,57.9852814 11.9852814,60 9.5,60 C7.01471863,60 5,57.9852814 5,55.5 L5,40.5 C5,38.0147186 7.01471863,36 9.5,36 Z M78.5,60 C76.0147186,60 74,57.9852814 74,55.5 L74,40.5 C74,38.0147186 76.0147186,36 78.5,36 C80.9852814,36 83,38.0147186 83,40.5 L83,55.5 C83,57.9852814 80.9852814,60 78.5,60 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_game_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Room/room_icon_game_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M80.2659078,36.6298276 L42.6292788,40.9612712 L70.2218263,70.1039436 C63.5215441,76.8342943 54.2472484,81 44,81 C23.5654643,81 7,64.4345357 7,44 C7,23.5654643 23.5654643,7 44,7 C61.9108251,7 76.8492425,19.7263906 80.2659078,36.6298276 Z M45,30 C48.3137085,30 51,27.3137085 51,24 C51,20.6862915 48.3137085,18 45,18 C41.6862915,18 39,20.6862915 39,24 C39,27.3137085 41.6862915,30 45,30 Z M72.5,57 C70.0147186,57 68,54.9852814 68,52.5 C68,50.0147186 70.0147186,48 72.5,48 C74.9852814,48 77,50.0147186 77,52.5 C77,54.9852814 74.9852814,57 72.5,57 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

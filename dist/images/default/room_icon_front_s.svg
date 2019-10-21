@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Room/room_icon_front_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Room/room_icon_front_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M27,11 L62,11 C64.7614237,11 67,13.2385763 67,16 L67,73 C67,75.7614237 64.7614237,78 62,78 L27,78 C24.2385763,78 22,75.7614237 22,73 L22,16 C22,13.2385763 24.2385763,11 27,11 Z M60.5,45 C61.8807119,45 63,43.8807119 63,42.5 C63,41.1192881 61.8807119,40 60.5,40 C59.1192881,40 58,41.1192881 58,42.5 C58,43.8807119 59.1192881,45 60.5,45 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

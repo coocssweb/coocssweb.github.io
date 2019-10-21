@@ -3,8 +3,13 @@
     <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
     <title>Device2/devices_icon_one_button_remote_s</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Device2/devices_icon_one_button_remote_s" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M44,84 C21.90861,84 4,66.09139 4,44 C4,21.90861 21.90861,4 44,4 C66.09139,4 84,21.90861 84,44 C84,66.09139 66.09139,84 44,84 Z M44,76 C61.673112,76 76,61.673112 76,44 C76,26.326888 61.673112,12 44,12 C26.326888,12 12,26.326888 12,44 C12,61.673112 26.326888,76 44,76 Z M44,73 C60.0162577,73 73,60.0162577 73,44 C73,27.9837423 60.0162577,15 44,15 C27.9837423,15 15,27.9837423 15,44 C15,60.0162577 27.9837423,73 44,73 Z" id="Combined-Shape" fill="#999999"></path>
+        <path d="M44,84 C21.90861,84 4,66.09139 4,44 C4,21.90861 21.90861,4 44,4 C66.09139,4 84,21.90861 84,44 C84,66.09139 66.09139,84 44,84 Z M44,76 C61.673112,76 76,61.673112 76,44 C76,26.326888 61.673112,12 44,12 C26.326888,12 12,26.326888 12,44 C12,61.673112 26.326888,76 44,76 Z M44,73 C60.0162577,73 73,60.0162577 73,44 C73,27.9837423 60.0162577,15 44,15 C27.9837423,15 15,27.9837423 15,44 C15,60.0162577 27.9837423,73 44,73 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
     </g>
 </svg>

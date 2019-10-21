@@ -3,8 +3,13 @@
     <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
     <title>Device2/devices_icon1_switch1_s </title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="112.960737%" y1="-19.1113281%" x2="-16.6566506%" y2="116.977539%" id="linearGradient-1">
+            <stop stop-color="#8AADEC" offset="0%"></stop>
+            <stop stop-color="#1E50A0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Device2/devices_icon1_switch1_s-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M78,63.5 C78,67.084 75.084,70 71.5,70 L45.5,70 L45.5,6 L71.5,6 C75.084,6 78,8.916 78,12.5 L78,63.5 Z M10,12.5 C10,8.916 12.916,6 16.5,6 L42.5,6 L42.5,70 L16.5,70 C12.916,70 10,67.084 10,63.5 L10,12.5 Z M16.5,3 C11.262,3 7,7.262 7,12.5 L7,63.5 L7,75.5 C7,80.738 11.262,85 16.5,85 L71.5,85 C76.738,85 81,80.738 81,75.5 L81,63.5 L81,12.5 C81,7.262 76.738,3 71.5,3 L16.5,3 Z" id="Page-1" fill="#999999"></path>
+        <path d="M78,63.5 C78,67.084 75.084,70 71.5,70 L45.5,70 L45.5,6 L71.5,6 C75.084,6 78,8.916 78,12.5 L78,63.5 Z M10,12.5 C10,8.916 12.916,6 16.5,6 L42.5,6 L42.5,70 L16.5,70 C12.916,70 10,67.084 10,63.5 L10,12.5 Z M16.5,3 C11.262,3 7,7.262 7,12.5 L7,63.5 L7,75.5 C7,80.738 11.262,85 16.5,85 L71.5,85 C76.738,85 81,80.738 81,75.5 L81,63.5 L81,12.5 C81,7.262 76.738,3 71.5,3 L16.5,3 Z" id="Page-1" fill="url(#linearGradient-1)"></path>
     </g>
 </svg>
