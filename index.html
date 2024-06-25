@@ -55,6 +55,7 @@
         background-color: #004d40;
         color: #fff;
         display: none;
+        user-select: none;
     }
 
     .btn-open{
@@ -115,7 +116,28 @@
     let deferredPrompt = null;
     let $btnInstall = document.querySelector('.btn-install');
     let $btnOpen = document.querySelector('.btn-open');
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    let _tick = null;
+    const _checkInstall = async() => {
+        try {
+            const apps = await navigator.getInstalledRelatedApps();
+            const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
+    
+            if (isInstalled) {
+                $btnInstall.style.display = 'none';
+                $btnOpen.style.display = 'flex';
+                clearInterval(_tick);
+            } else {
+                $btnInstall.style.display = 'flex';
+                $btnOpen.style.display = 'none';
+            }
+        }catch{}
+    }
+
     document.addEventListener('click', (e) =>{
+        if (isStandalone) {
+            return;
+        }
         if (deferredPrompt?.prompt) {
             deferredPrompt.prompt();
 
@@ -124,6 +146,9 @@
                     console.log('开始安装');
                     deferredPrompt = null;
                     $btnInstall.innerHTML = '正在安装中';
+                    _tick = setInterval(() => {
+                        _checkInstall();
+                    }, 1000);
                 } else {
                     
                 }
@@ -132,32 +157,29 @@
     });
 
     window.addEventListener('beforeinstallprompt', (e) =>{
+        if (isStandalone) {
+            return;
+        }
         e.preventDefault();
         deferredPrompt = e;
     });
 
 
     window.addEventListener('appinstalled', (e) =>{
-        console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+        if (isStandalone) {
+            return;
+        }
         deferredPrompt = null;
         $btnInstall.style.display = 'none';
         $btnOpen.style.display = 'flex';
     });
 
     (() => {
+        if (isStandalone) {
+            return;
+        }
         setTimeout(async() => {
-            try {
-                const apps = await navigator.getInstalledRelatedApps();
-                const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
-                console.log('sssssssssssssssssssssssssssssss', apps, isInstalled)
-                if (isInstalled) {
-                    $btnInstall.style.display = 'none';
-                    $btnOpen.style.display = 'flex';
-                } else {
-                    $btnInstall.style.display = 'flex';
-                    $btnOpen.style.display = 'none';
-                }
-            }catch{}
+            _checkInstall();
         }, 1000)
     })();
 
