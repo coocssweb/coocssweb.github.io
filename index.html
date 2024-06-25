@@ -69,14 +69,14 @@
             deferredPrompt = null;
         });
 
-        (async() => {
+        (async () => {
             try {
                 console.log('getInstalledRelatedApps');
                 const apps = await navigator.getInstalledRelatedApps();
                 console.log('3333333333333333333333333333333333333', apps);
                 
             }catch{}
-        })()
+        })();
     </script>
 <link href="dist/stylesheets/index.91ffc5772a6f5c9f37c976962012762c.css" rel="stylesheet"></head>
 <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
