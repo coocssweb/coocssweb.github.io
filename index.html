@@ -57,14 +57,14 @@
             }
         });
 
-        document.addEventListener('beforeinstallprompt', (e) =>{
+        window.addEventListener('beforeinstallprompt', (e) =>{
             console.log('111111111111111111111111111111111', e);
             e.preventDefault();
             deferredPrompt = e;
         });
 
 
-        document.addEventListener('appinstalled', (e) =>{
+        window.addEventListener('appinstalled', (e) =>{
             console.log('2222222222222222222222222222222222', e);
             deferredPrompt = null;
         });
