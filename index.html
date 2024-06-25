@@ -101,7 +101,7 @@
         }
     });
 
-    window.addEventListener('beforeinstallprompt', (e) =>{
+    window.addEventListener('beforeinstallprompt', function(e){
         console.log('bbbbbbbbbbbbbbb', isStandalone, e);
         if (isStandalone) {
             return;
