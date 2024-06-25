@@ -38,58 +38,33 @@
             refreshRem();
         })(window, document);
     </script>
-    <script type="text/javascript">
-        let deferredPrompt = null;
-        document.addEventListener('click', (e) =>{
-            console.log('00000000000000000000000000000000')
-            if (deferredPrompt?.prompt) {
-                deferredPrompt.prompt();
-
-                deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('PWA已安装');
-                } else {
-                    console.log('用户没有安装PWA');
-                }
-                // 清理prompt对象以避免内存泄漏
-                deferredPrompt = null;
-                });
-            }
-        });
-
-        window.addEventListener('beforeinstallprompt', (e) =>{
-            console.log('111111111111111111111111111111111', e);
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-
-
-        window.addEventListener('appinstalled', (e) =>{
-            console.log('2222222222222222222222222222222222', e);
-            deferredPrompt = null;
-        });
-
-        ( () => {
-            setTimeout(async() => {
-                try {
-                console.log('getInstalledRelatedApps');
-                const apps = await navigator.getInstalledRelatedApps();
-                console.log('3333333333333333333333333333333333333', apps);
-                
-            }catch{}
-            }, 1000)
-        })();
-    </script>
+    
 <link href="dist/stylesheets/index.91ffc5772a6f5c9f37c976962012762c.css" rel="stylesheet"></head>
-<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-<script>
-  // VConsole will be exported to `window.VConsole` by default.
-  var vConsole = new window.VConsole();
-</script>
+<style type="text/css">
+    .btn-install, .btn-open{
+        position: absolute;
+        bottom: 30px;
+        width: 120px;
+        left: 50%;
+        margin-left: -60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        background-color: #004d40;
+        color: #fff;
+        display: none;
+    }
+
+    .btn-open{
+        background-color: #f29aaa;
+    }
+
+ 
+</style>
 <body>
 <div class="wrapper clearfix">
-    
-    
         <div class="home page">
     <div class="home-copy">
         <div class="home-content">
@@ -97,6 +72,8 @@
             <h3>It is a <mark>beautiful</mark> day, <mark>Don't</mark> let it get away</h3>
         </div>
     </div>
+    <div class="btn-install">点击安装</div>
+    <div class="btn-open">打开APP</div>
 </div>
 <div class="project">
     <h2><span>开源项目</span></h2>
@@ -126,11 +103,63 @@
     
 
 </div>
+
+
+
+<script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
 <script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cspan id='cnzz_stat_icon_3300333'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D3300333' type='text/javascript'%3E%3C/script%3E"));
+    let deferredPrompt = null;
+    let $btnInstall = document.querySelector('.btn-install');
+    let $btnOpen = document.querySelector('.btn-open');
+    document.addEventListener('click', (e) =>{
+        if (deferredPrompt?.prompt) {
+            deferredPrompt.prompt();
+
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('开始安装');
+                    deferredPrompt = null;
+                    $btnInstall.innerHTML = '正在安装中';
+                } else {
+                    
+                }
+            });
+        }
+    });
+
+    window.addEventListener('beforeinstallprompt', (e) =>{
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+
+
+    window.addEventListener('appinstalled', (e) =>{
+        console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+        deferredPrompt = null;
+        $btnInstall.style.display = 'none';
+        $btnOpen.style.display = 'flex';
+    });
+
+    (() => {
+        setTimeout(async() => {
+            try {
+                const apps = await navigator.getInstalledRelatedApps();
+                const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
+                console.log('sssssssssssssssssssssssssssssss', apps, isInstalled)
+                if (isInstalled) {
+                    $btnInstall.style.display = 'flex';
+                    $btnOpen.style.display = 'none';
+                } else {
+                    $btnInstall.style.display = 'flex';
+                    $btnOpen.style.display = 'none';
+                }
+            }catch{}
+        }, 1000)
+    })();
+
+    $btnOpen.addEventListener('click', () => {
+        window.open('https://coocssweb.github.io', '_blank');
+    });
 </script>
-
-
-<script type="text/javascript" src="dist/js/index.5eef42b4.js"></script></body>
+</body>
 </html>
