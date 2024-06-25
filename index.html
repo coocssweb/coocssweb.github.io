@@ -144,7 +144,7 @@
         if (isStandalone) {
             return;
         }
-        console.log('2. 点击开始安装');
+        console.log('2. 点击开始安装', deferredPrompt);
         if (deferredPrompt?.prompt) {
             console.log('2.1 点击开始安装');
             deferredPrompt.prompt();
@@ -165,6 +165,7 @@
     });
 
     window.addEventListener('beforeinstallprompt', (e) =>{
+        console.log('bbbbbbbbbbbbbbb', isStandalone, e);
         if (isStandalone) {
             return;
         }
