@@ -37,108 +37,8 @@
             }, false);
             refreshRem();
         })(window, document);
-
-        
     </script>
     
-
-    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-<script>
-  // VConsole will be exported to `window.VConsole` by default.
-  var vConsole = new window.VConsole();
-</script>
-
-<script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
-<script type="text/javascript">
-    let deferredPrompt = null;
-    let $btnInstall = document.querySelector('.btn-install');
-    let $btnOpen = document.querySelector('.btn-open');
-    let isStandalone = false;
-    try {
-        isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-    } catch{}
-    
-    let _tick = null;
-    const _checkInstall = async() => {
-        try {
-            console.log('1. 开始检查 getInstalledRelatedApps');
-            const apps = await navigator.getInstalledRelatedApps();
-            const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
-            console.log('2. 检查完成', apps, isInstalled);
-    
-            if (isInstalled) {
-                $btnInstall.style.display = 'none';
-                $btnOpen.style.display = 'flex';
-                clearInterval(_tick);
-            } else {
-                $btnInstall.style.display = 'flex';
-                $btnOpen.style.display = 'none';
-            }
-        }catch{}
-    }
-
-    document.addEventListener('click', (e) =>{
-        if (isStandalone) {
-            return;
-        }
-        console.log('2. 点击开始安装', deferredPrompt);
-        if (deferredPrompt?.prompt) {
-            console.log('2.1 点击开始安装');
-            deferredPrompt.prompt();
-
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('2.2 点击了接受安装');
-                    deferredPrompt = null;
-                    $btnInstall.innerHTML = '正在安装中';
-                    _tick = setInterval(() => {
-                        _checkInstall();
-                    }, 2000);
-                } else {
-                    
-                }
-            });
-        }
-    });
-
-    window.addEventListener('beforeinstallprompt', function(e){
-        console.log('bbbbbbbbbbbbbbb', isStandalone, e);
-        if (isStandalone) {
-            return;
-        }
-        console.log('3 挂在prompt');
-        e.preventDefault();
-        deferredPrompt = e;
-    });
-
-
-    window.addEventListener('appinstalled', (e) =>{
-        if (isStandalone) {
-            return;
-        }
-        console.log('4 点击了安装完成');
-        deferredPrompt = null;
-        // $btnInstall.style.display = 'none';
-        // $btnOpen.style.display = 'flex';
-    });
-
-    (() => {
-        if (isStandalone) {
-            return;
-        }
-        console.log('5.初始化，发起安装状态检测');
-        _checkInstall();
-        setTimeout(() => {
-            _checkInstall();
-        }, 1000)
-    })();
-
-    $btnOpen.addEventListener('click', () => {
-        console.log('6.点击了打开APP');
-        window.open('https://coocssweb.github.io', '_blank');
-    });
-</script>
-
 <link href="dist/stylesheets/index.91ffc5772a6f5c9f37c976962012762c.css" rel="stylesheet"></head>
 <style type="text/css">
     .btn-install, .btn-open{
@@ -205,6 +105,103 @@
 
 </div>
 
+<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+</script>
 
+<script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
+<script type="text/javascript">
+    let deferredPrompt = null;
+    let $btnInstall = document.querySelector('.btn-install');
+    let $btnOpen = document.querySelector('.btn-open');
+    let isStandalone = false;
+    try {
+        isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    } catch{}
+    
+    let _tick = null;
+    const _checkInstall = async() => {
+        try {
+            console.log('1. 开始检查 getInstalledRelatedApps');
+            const apps = await navigator.getInstalledRelatedApps();
+            const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
+            console.log('2. 检查完成', apps, isInstalled);
+    
+            if (isInstalled) {
+                $btnInstall.style.display = 'none';
+                $btnOpen.style.display = 'flex';
+                clearInterval(_tick);
+            } else {
+                $btnInstall.style.display = 'flex';
+                $btnOpen.style.display = 'none';
+            }
+        }catch{}
+    }
+
+    document.addEventListener('click', (e) =>{
+        if (isStandalone) {
+            return;
+        }
+        console.log('2. 点击开始安装');
+        if (deferredPrompt?.prompt) {
+            console.log('2.1 点击开始安装');
+            deferredPrompt.prompt();
+
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('2.2 点击了接受安装');
+                    deferredPrompt = null;
+                    $btnInstall.innerHTML = '正在安装中';
+                    _tick = setInterval(() => {
+                        _checkInstall();
+                    }, 2000);
+                } else {
+                    
+                }
+            });
+        }
+    });
+
+    console.log('ddddddddddddddd');
+    window.addEventListener('beforeinstallprompt', function(e){
+        e.preventDefault();
+        console.log('bbbbbbbbbbbbbbb', isStandalone, e);
+        if (isStandalone) {
+            return;
+        }
+        console.log('3 挂在prompt');
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+
+
+    window.addEventListener('appinstalled', (e) =>{
+        if (isStandalone) {
+            return;
+        }
+        console.log('4 点击了安装完成');
+        deferredPrompt = null;
+        // $btnInstall.style.display = 'none';
+        // $btnOpen.style.display = 'flex';
+    });
+
+    (() => {
+        if (isStandalone) {
+            return;
+        }
+        console.log('5.初始化，发起安装状态检测');
+        _checkInstall();
+        setTimeout(() => {
+            _checkInstall();
+        }, 1000)
+    })();
+
+    $btnOpen.addEventListener('click', () => {
+        console.log('6.点击了打开APP');
+        window.open('https://coocssweb.github.io', '_blank');
+    });
+</script>
 </body>
 </html>
