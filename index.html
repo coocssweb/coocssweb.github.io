@@ -151,8 +151,8 @@
                 const isInstalled = (apps ||[]).find((item) => item.url=== 'https://coocssweb.github.io/manifest.json');
                 console.log('sssssssssssssssssssssssssssssss', apps, isInstalled)
                 if (isInstalled) {
-                    $btnInstall.style.display = 'flex';
-                    $btnOpen.style.display = 'none';
+                    $btnInstall.style.display = 'none';
+                    $btnOpen.style.display = 'flex';
                 } else {
                     $btnInstall.style.display = 'flex';
                     $btnOpen.style.display = 'none';
