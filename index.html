@@ -38,7 +38,17 @@
             refreshRem();
         })(window, document);
     </script>
-    
+    <script type="text/javascript">
+        let deferredPrompt = null;
+        window.addEventListener('beforeinstallprompt', function(e){
+            deferredPrompt = e;
+        });
+
+
+        window.addEventListener('appinstalled', (e) =>{
+            deferredPrompt = null;
+        });
+    </script>
 <link href="dist/stylesheets/index.91ffc5772a6f5c9f37c976962012762c.css" rel="stylesheet"></head>
 <style type="text/css">
     .btn-install, .btn-open{
@@ -107,13 +117,11 @@
 
 <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
 <script>
-  // VConsole will be exported to `window.VConsole` by default.
   var vConsole = new window.VConsole();
 </script>
 
 <script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
 <script type="text/javascript">
-    let deferredPrompt = null;
     let $btnInstall = document.querySelector('.btn-install');
     let $btnOpen = document.querySelector('.btn-open');
     let isStandalone = false;
@@ -140,10 +148,7 @@
         }catch{}
     }
 
-    document.addEventListener('click', (e) =>{
-        if (isStandalone) {
-            return;
-        }
+    $btnInstall.addEventListener('click', (e) =>{
         console.log('2. 点击开始安装');
         if (deferredPrompt?.prompt) {
             console.log('2.1 点击开始安装');
@@ -160,31 +165,10 @@
                 } else {
                     
                 }
+            }).catch(error => {
+                console.log('---------------', error);
             });
         }
-    });
-
-    console.log('ddddddddddddddd');
-    window.addEventListener('beforeinstallprompt', function(e){
-        e.preventDefault();
-        console.log('bbbbbbbbbbbbbbb', isStandalone, e);
-        if (isStandalone) {
-            return;
-        }
-        console.log('3 挂在prompt');
-        e.preventDefault();
-        deferredPrompt = e;
-    });
-
-
-    window.addEventListener('appinstalled', (e) =>{
-        if (isStandalone) {
-            return;
-        }
-        console.log('4 点击了安装完成');
-        deferredPrompt = null;
-        // $btnInstall.style.display = 'none';
-        // $btnOpen.style.display = 'flex';
     });
 
     (() => {
