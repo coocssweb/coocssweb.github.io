@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>王佳欣的一些分享</title>
-    <meta name="keyword" content="王佳欣的一些分享">
-    <meta name="description" content="谢谢你访问我的开源项目">
+    <title></title>
+    <meta name="keyword" content="">
+    <meta name="description" content="">
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -41,6 +41,8 @@
     <script type="text/javascript">
         let deferredPrompt = null;
         window.addEventListener('beforeinstallprompt', function(e){
+            console.log('1.挂载事件', e);
+            e.preventDefault();
             deferredPrompt = e;
         });
 
