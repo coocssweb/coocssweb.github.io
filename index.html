@@ -133,10 +133,26 @@
     .btn-open{
         background-color: #f29aaa;
     }
+    .home{
+        background-color: #edfdec;
+    }
+    .icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./unnamed.png);
+    }
 </style>
 <body>
 <div class="wrapper clearfix">
     <div class="home page">
+        <div class="icon"></div>
         <div class="btn-install">点击安装</div>
         <div class="btn-open">打开APP</div>
         <div class="btn-installing">安装中<span class="loading-dotting"></span></div>
@@ -155,11 +171,7 @@
     let $btnOpen = document.querySelector('.btn-open');
     
     let _tick = null;
-
-    let isStandalone = false;
-    try {
-        isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-    } catch{}
+    let _isInstalling = false;
     
     const uninstall = () =>{
         $btnInstalling.style.display = 'none';
@@ -176,7 +188,9 @@
     const installed = () => {
         $btnInstalling.style.display = 'none';
         $btnInstall.style.display = 'none';
-        $btnOpen.style.display = 'flex';
+        let isStandalone =  window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;;
+        $btnOpen.style.display = isStandalone?'none': 'flex';
+        
     }
 
     const _checkInstall = async() => {
@@ -188,8 +202,9 @@
     
             if (isInstalled) {
                 installed();
+                _isInstalling = false;
                 clearInterval(_tick);
-            } else {
+            } else if(!_isInstalling) {
                 uninstall();
             }
         }catch{}
@@ -205,6 +220,7 @@
                     console.log('2.2 点击了接受安装');
                     deferredPrompt = null;
                     installing();
+                    _isInstalling= true;
                     _tick = setInterval(() => {
                         _checkInstall();
                     }, 2000);
