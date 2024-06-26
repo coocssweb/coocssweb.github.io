@@ -53,7 +53,64 @@
     </script>
 <link href="dist/stylesheets/index.91ffc5772a6f5c9f37c976962012762c.css" rel="stylesheet"></head>
 <style type="text/css">
-    .btn-install, .btn-open{
+        @-webkit-keyframes loadingDotting {
+    0% {
+        content: '';
+    }
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    75% {
+        content: '...';
+    }
+
+    100% {
+        content: '...';
+    }
+    }
+
+    @keyframes loadingDotting {
+    0% {
+        content: '';
+    }
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    75% {
+        content: '...';
+    }
+
+    100% {
+        content: '...';
+    }
+    }
+
+    .loading {
+    position: absolute;
+    text-align: center;
+    font-size: 0.2rem;
+    width: 100%;
+    top: 50%;
+    }
+
+    .loading-dotting:before {
+    content: '...';
+    -webkit-animation: loadingDotting 1.2s linear infinite;
+    animation: loadingDotting 1.2s linear infinite;
+    }
+    .btn-install, .btn-installing, .btn-open{
         position: absolute;
         bottom: 30px;
         width: 120px;
@@ -68,53 +125,22 @@
         color: #fff;
         display: none;
         user-select: none;
+        border-radius: 4px;
     }
-
+    .btn-installing {
+        background-color: #000000;
+    }
     .btn-open{
         background-color: #f29aaa;
     }
-
- 
 </style>
 <body>
 <div class="wrapper clearfix">
-        <div class="home page">
-    <div class="home-copy">
-        <div class="home-content">
-            <h2>写「漂亮的」代码</h2>
-            <h3>It is a <mark>beautiful</mark> day, <mark>Don't</mark> let it get away</h3>
-        </div>
+    <div class="home page">
+        <div class="btn-install">点击安装</div>
+        <div class="btn-open">打开APP</div>
+        <div class="btn-installing">安装中<span class="loading-dotting"></span></div>
     </div>
-    <div class="btn-install">点击安装</div>
-    <div class="btn-open">打开APP</div>
-</div>
-<div class="project">
-    <h2><span>开源项目</span></h2>
-    <div class="project-wrapper">
-        <a class="project-item" href="https://github.com/coocssweb/react-ssr">
-            <div class="project-name">React-SSR</div>
-            <div class="project-desc">React服务端渲染</div>
-        </a>
-        <a class="project-item" href="https://coocssweb.github.io/react">
-            <div class="project-name">React组件</div>
-            <div class="project-desc">一些React组件</div>
-        </a>
-        <a class="project-item" href="https://coocssweb.github.io/animation">
-            <div class="project-name">CssAnimation</div>
-            <div class="project-desc">一些好玩的Css动画</div>
-        </a>
-        <a class="project-item" href="https://github.com/MeituPhone/h5-cli">
-            <div class="project-name">H5Cli</div>
-            <div class="project-desc">一个简洁的h5脚手架</div>
-        </a>
-        <a class="project-item" href="https://github.com/MeituPhone/coo-vue">
-            <div class="project-name">CooVue</div>
-            <div class="project-desc">一个响应式Vue组件库</div>
-        </a>
-    </div>
-</div>
-    
-
 </div>
 
 <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
@@ -125,13 +151,34 @@
 <script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
 <script type="text/javascript">
     let $btnInstall = document.querySelector('.btn-install');
+    let $btnInstalling = document.querySelector('.btn-installing');
     let $btnOpen = document.querySelector('.btn-open');
+    
+    let _tick = null;
+
     let isStandalone = false;
     try {
         isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
     } catch{}
     
-    let _tick = null;
+    const uninstall = () =>{
+        $btnInstalling.style.display = 'none';
+        $btnInstall.style.display = 'flex';
+        $btnOpen.style.display = 'none';
+    }
+
+    const installing = () => {
+        $btnInstalling.style.display = 'flex';
+        $btnInstall.style.display = 'none';
+        $btnOpen.style.display = 'none';
+    }
+
+    const installed = () => {
+        $btnInstalling.style.display = 'none';
+        $btnInstall.style.display = 'none';
+        $btnOpen.style.display = 'flex';
+    }
+
     const _checkInstall = async() => {
         try {
             console.log('1. 开始检查 getInstalledRelatedApps');
@@ -140,12 +187,10 @@
             console.log('2. 检查完成', apps, isInstalled);
     
             if (isInstalled) {
-                $btnInstall.style.display = 'none';
-                $btnOpen.style.display = 'flex';
+                installed();
                 clearInterval(_tick);
             } else {
-                $btnInstall.style.display = 'flex';
-                $btnOpen.style.display = 'none';
+                uninstall();
             }
         }catch{}
     }
@@ -155,12 +200,11 @@
         if (deferredPrompt?.prompt) {
             console.log('2.1 点击开始安装');
             deferredPrompt.prompt();
-
             deferredPrompt.userChoice.then((choiceResult) => {
                 if (choiceResult.outcome === 'accepted') {
                     console.log('2.2 点击了接受安装');
                     deferredPrompt = null;
-                    $btnInstall.innerHTML = '正在安装中';
+                    installing();
                     _tick = setInterval(() => {
                         _checkInstall();
                     }, 2000);
@@ -168,16 +212,12 @@
                     
                 }
             }).catch(error => {
-                console.log('---------------', error);
+                console.log('安装报错', error);
             });
         }
     });
 
     (() => {
-        if (isStandalone) {
-            return;
-        }
-        console.log('5.初始化，发起安装状态检测');
         _checkInstall();
         setTimeout(() => {
             _checkInstall();
