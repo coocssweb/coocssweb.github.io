@@ -2,7 +2,7 @@
     "name": "Lucky",
     "short_name": "Lucky",
     "icons": [{
-      "src": "public/icon/icon_128x128.png",
+      "src": "icons/icon_128x128.png",
         "sizes": "128x128",
         "type": "image/png"
       }, {
@@ -24,10 +24,11 @@
         "type": "image/png"
       }
     ],
-    "start_url": "/",
+    "start_url": "https://coocssweb.github.io/",
     "display": "standalone",
     "background_color": "#f9f9fa",
     "theme_color": "#f9f9fa",
+    "orientation":"natural",
     "related_applications":  [{
       "platform": "webapp",
       "url": "https://coocssweb.github.io/manifest.json"

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+	<link rel="manifest" href="/manifest.json">
     <meta name="keyword" content="">
     <meta name="description" content="">
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
-	<link rel="manifest" href="/manifest.json">
     <script>
         ; (function (win, doc) {
             var docEl = doc.documentElement,
@@ -39,7 +38,7 @@
         })(window, document);
     </script>
     <script type="text/javascript">
-        let deferredPrompt = null;
+        var deferredPrompt = null;
         window.addEventListener('beforeinstallprompt', function(e){
             console.log('1.挂载事件', e);
             e.preventDefault();
@@ -166,34 +165,34 @@
 
 <script type="text/javascript" src="dist/js/index.5eef42b4.js"></script>
 <script type="text/javascript">
-    let $btnInstall = document.querySelector('.btn-install');
-    let $btnInstalling = document.querySelector('.btn-installing');
-    let $btnOpen = document.querySelector('.btn-open');
+    var $btnInstall = document.querySelector('.btn-install');
+    var $btnInstalling = document.querySelector('.btn-installing');
+    var $btnOpen = document.querySelector('.btn-open');
     
-    let _tick = null;
-    let _isInstalling = false;
+    var _tick = null;
+    var _isInstalling = false;
     
-    const uninstall = () =>{
+    var uninstall =function(){
         $btnInstalling.style.display = 'none';
         $btnInstall.style.display = 'flex';
         $btnOpen.style.display = 'none';
     }
 
-    const installing = () => {
+    var installing = function(){
         $btnInstalling.style.display = 'flex';
         $btnInstall.style.display = 'none';
         $btnOpen.style.display = 'none';
     }
 
-    const installed = () => {
+    var installed = function(){
         $btnInstalling.style.display = 'none';
         $btnInstall.style.display = 'none';
-        let isStandalone =  window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;;
+        var isStandalone =  window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;;
         $btnOpen.style.display = isStandalone?'none': 'flex';
         
     }
 
-    const _checkInstall = async() => {
+    var _checkInstall = async() => {
         try {
             console.log('1. 开始检查 getInstalledRelatedApps');
             const apps = await navigator.getInstalledRelatedApps();
